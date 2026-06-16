@@ -1,0 +1,60 @@
+# ── Supabase — formato separado (más confiable) ──────────────
+spring.datasource.url=jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0
+spring.datasource.username=postgres.exrbmpytqwfjqpputyxo
+spring.datasource.password=Musica28Tochi
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# HikariCP
+spring.datasource.hikari.connection-timeout=30000
+spring.datasource.hikari.maximum-pool-size=5
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.idle-timeout=300000
+
+# JPA
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.default_schema=auth_app
+spring.jpa.show-sql=true
+spring.jpa.open-in-view=false
+
+# JWT
+jwt.secret=cQ5DhRTSvH+qo58z9CmamR0DkpogIMcETKrkhjYiPTKktFgovil7wIbNcFsrZD1IFzd1EolZGRbcy5SSO7KR9g==
+jwt.expiration-ms=900000
+
+
+server.port=8080
+
+supabase.url=https://exrbmpytqwfjqpputyxo.supabase.co
+supabase.service-role-key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4cmJtcHl0cXdmanFwcHV0eXhvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODcxMjcxNCwiZXhwIjoyMDk0Mjg4NzE0fQ.H1HlXH3CrRkLRmYQjme2d9PuTE2tEddZsnwralgjI4I
+
+
+
+
+FORMATO DESPLEGADO:
+
+# ── Supabase — formato separado ──────────────
+spring.datasource.url=${SPRING_DATASOURCE_URL:jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME:postgres.exrbmpytqwfjqpputyxo}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# HikariCP
+spring.datasource.hikari.connection-timeout=30000
+spring.datasource.hikari.maximum-pool-size=5
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.idle-timeout=300000
+
+# JPA
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.default_schema=auth_app
+spring.jpa.show-sql=true
+spring.jpa.open-in-view=false
+
+# JWT
+jwt.secret=${JWT_SECRET}
+jwt.expiration-ms=900000
+
+# Puerto dinámico para Render
+server.port=${PORT:8080}
+
+supabase.url=${SUPABASE_URL:https://exrbmpytqwfjqpputyxo.supabase.co}
+supabase.service-role-key=${SUPABASE_SERVICE_ROLE}
