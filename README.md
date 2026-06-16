@@ -16,6 +16,14 @@ Proyecto integral de gestión educativa desarrollado con **Spring Boot** (Backen
 
 Para que el proyecto funcione, debes configurar los archivos de variables de entorno. 
 
+### DEPENDENCIAS NECESARIAS PARA EL  Frontend (Expo):
+```
+npx expo install expo-secure-store expo-constants
+npm install axios react-hook-form @hookform/resolvers zod
+npx expo install @react-native-community/datetimepicker
+npm install @supabase/supabase-js
+```
+
 ### 1. Frontend (Expo):
 ```.env:
 # API Backend
