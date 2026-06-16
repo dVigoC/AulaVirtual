@@ -16,7 +16,17 @@ Proyecto integral de gestión educativa desarrollado con **Spring Boot** (Backen
 
 Para que el proyecto funcione, debes configurar los archivos de variables de entorno. 
 
-### 1. Backend (Spring Boot)
+### 1. Frontend (Expo):
+```.env:
+# API Backend
+EXPO_PUBLIC_API_URL=http://localhost:8080/api
+
+# Supabase (Anon Key es segura para el cliente)
+EXPO_PUBLIC_SUPABASE_URL=<TU_URL_DE_SUPABASE>
+EXPO_PUBLIC_SUPABASE_ANON_KEY=<TU_SUPABASE_ANON_KEY>
+```
+
+### 2. Backend (Spring Boot)
 Ubícate en `backend/src/main/resources/` y crea un archivo llamado `application.properties`. Puedes usar el siguiente esquema:
 
 ```properties
@@ -47,11 +57,3 @@ supabase.service-role-key=<TU_SUPABASE_SERVICE_ROLE_KEY>
 
 server.port=8080
 
-### 2. Frontend (Expo):
-.env:
-# API Backend
-EXPO_PUBLIC_API_URL=http://localhost:8080/api
-
-# Supabase (Anon Key es segura para el cliente)
-EXPO_PUBLIC_SUPABASE_URL=<TU_URL_DE_SUPABASE>
-EXPO_PUBLIC_SUPABASE_ANON_KEY=<TU_SUPABASE_ANON_KEY>
